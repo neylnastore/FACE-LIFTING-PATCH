@@ -1,1 +1,686 @@
-sddd
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Neylna Store - Face Lifting Patch | Angkat Wajah Instan Tanpa Suntik</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fffaf7;
+            color: #2d2a26;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        :root {
+            --primary: #c47a6b;
+            --primary-dark: #a85c4e;
+            --secondary: #e6cdb6;
+            --accent-gold: #d9b48b;
+            --soft-pink: #f9e6e0;
+            --dark-text: #2e2a27;
+            --light-bg: #fef6f2;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .header {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(2px);
+            background: rgba(255,255,255,0.96);
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            flex-wrap: wrap;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+        }
+        .store-name {
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -0.3px;
+            background: linear-gradient(135deg, #c47a6b, #a85c4e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-family: 'Playfair Display', serif;
+        }
+        .btn-cta-header {
+            background: var(--primary);
+            padding: 10px 20px;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 8px rgba(196,122,107,0.2);
+            text-decoration: none;
+        }
+        .btn-cta-header:hover {
+            background: var(--primary-dark);
+            transform: scale(1.02);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            border: none;
+            padding: 14px 32px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 6px 14px rgba(196,122,107,0.3);
+            text-decoration: none;
+        }
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            padding: 48px 0 32px;
+        }
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            align-items: center;
+        }
+        .hero-image {
+            flex: 1.2;
+        }
+        .hero-image img {
+            width: 100%;
+            border-radius: 32px;
+            box-shadow: 0 25px 40px -12px rgba(0,0,0,0.15);
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .tagline {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #2d2a26;
+        }
+        .highlight {
+            color: var(--primary);
+            border-bottom: 3px solid var(--accent-gold);
+        }
+        
+        /* Paket comparison di hero */
+        .package-compare {
+            background: white;
+            border-radius: 28px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .package-item {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            border-radius: 20px;
+            background: #fef6f2;
+        }
+        .package-item.popular {
+            background: #fff0e8;
+            border: 1px solid var(--primary);
+        }
+        .package-name {
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+        .price-old-paket {
+            text-decoration: line-through;
+            color: #9b7b6b;
+            font-size: 0.9rem;
+        }
+        .price-new-paket {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        .ongkir-info {
+            background: #e6f4ea;
+            border-radius: 40px;
+            padding: 8px 16px;
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+        
+        .urgency-bar {
+            background: #2e2a27;
+            color: white;
+            border-radius: 60px;
+            padding: 16px 24px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin: 30px 0;
+        }
+        .counter-box, .timer-box {
+            background: rgba(255,255,255,0.12);
+            border-radius: 50px;
+            padding: 8px 18px;
+        }
+        .package-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .package-card {
+            background: white;
+            border-radius: 32px;
+            padding: 28px 20px;
+            flex: 1;
+            min-width: 240px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+            transition: 0.2s;
+            border: 1px solid #f0e2d9;
+        }
+        .package-card.popular {
+            border: 2px solid var(--primary);
+            position: relative;
+            background: #fffbf9;
+        }
+        .popular-badge {
+            position: absolute;
+            top: -14px;
+            background: var(--primary);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .btn-package {
+            background: var(--primary);
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 40px;
+            font-weight: 700;
+            color: white;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .form-embed-area {
+            background: white;
+            border-radius: 36px;
+            padding: 32px 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+            margin: 40px 0;
+        }
+        footer {
+            background: #f3ede9;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.8rem;
+        }
+        @media (max-width: 768px) {
+            .tagline { font-size: 1.7rem; }
+            .hero-grid { flex-direction: column; }
+            .package-compare { flex-direction: column; }
+            .urgency-bar { flex-direction: column; text-align: center; }
+        }
+        
+        /* lainnya (gallery, modal, popup) sama */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .gallery-item {
+            cursor: pointer;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            background: #f3ede9;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: 0.2s;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        .modal-content {
+            max-width: 90vw;
+            max-height: 90vh;
+        }
+        .modal-content img {
+            width: auto;
+            max-height: 85vh;
+            border-radius: 24px;
+        }
+        .order-popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            border-radius: 60px;
+            padding: 12px 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            z-index: 300;
+            backdrop-filter: blur(8px);
+            background: rgba(255,255,255,0.95);
+            border-left: 5px solid var(--primary);
+            max-width: 320px;
+            animation: slideIn 0.3s ease;
+            font-size: 0.85rem;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .popup-avatar {
+            width: 42px;
+            height: 42px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+        }
+        .card-feature {
+            background: white;
+            border-radius: 28px;
+            padding: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="container header-content">
+        <div class="logo-area">
+            <img class="logo-img" src="https://cdn.orderonline.id/uploads/images_8057731750768190275.png" alt="Neylna Store">
+            <span class="store-name">Neylna Store</span>
+        </div>
+        <a href="#order-form" class="btn-cta-header"><i class="fas fa-shopping-bag"></i> Beli Sekarang</a>
+    </div>
+</div>
+
+<main>
+    <div class="container hero">
+        <div class="hero-grid">
+            <div class="hero-image">
+                <img src="https://raftuldorintelor.ro/cdn/shop/files/poza7principala.png?v=1780916372" alt="Face Lifting Patch Hero">
+            </div>
+            <div class="hero-text">
+                <div class="tagline">MENDING PAKE INI <span class="highlight">DARIPADA SUNTIK KULIT</span><br>Angkat Wajah Instan!</div>
+                <p style="font-size: 1.1rem; margin-bottom: 16px;">✨ Tanpa rasa sakit, tanpa jarum. Hasil lifting dalam 30 menit. Kencangkan wajah, hilangkan garis halus & kerutan.</p>
+                
+                <!-- PERBANDINGAN PAKET LANGSUNG DI ATAS -->
+                <div class="package-compare">
+                    <div class="package-item">
+                        <div class="package-name">💎 Paket Basic</div>
+                        <div class="price-old-paket">Rp 207.000</div>
+                        <div class="price-new-paket">Rp 138.000</div>
+                        <div>40 pcs (1 bulan)</div>
+                    </div>
+                    <div class="package-item popular">
+                        <div class="package-name">⭐ Paket Hemat (Best Value)</div>
+                        <div class="price-old-paket">Rp 282.000</div>
+                        <div class="price-new-paket">Rp 188.000</div>
+                        <div>80 pcs + Bonus Masker Kolagen</div>
+                    </div>
+                </div>
+                <div class="ongkir-info">
+                    <i class="fas fa-truck-fast"></i> GRATIS ONGKIR s/d Rp 30.000 untuk pembayaran TF hari ini!
+                </div>
+                <a href="#order-form" class="btn-primary" style="margin-top: 24px; display: inline-block;"><i class="fas fa-bolt"></i> BELI SEKARANG JUGA</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Permasalahan + Solusi -->
+    <div class="container" style="background: var(--light-bg); border-radius: 48px; padding: 48px 24px; margin: 20px auto;">
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+            <div style="flex:1">
+                <h2 class="section-title" style="text-align: left;">😔 Wajah Kendur & Kerutan Mengganggu?</h2>
+                <p style="font-size: 1.1rem; line-height: 1.4;">Seiring usia 23-55 tahun, kolagen menurun drastis. Garis halus, pipi turun, dan rahang tidak tegas membuat penampilan terlihat lelah. <strong>Solusi:</strong> Face Lifting Patch dengan teknologi micro-lift langsung mengencangkan dalam 1 pemakaian! tanpa suntik, tanpa efek samping.</p>
+                <ul style="margin-top: 20px; list-style: none;">
+                    <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> Hasil terlihat dalam 30 menit</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> 100% Bahan Hypoallergenic</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> Tanpa iritasi, tanpa suntik kimia</li>
+                </ul>
+            </div>
+            <div style="flex:1; text-align: center;">
+                <img src="https://raftuldorintelor.ro/cdn/shop/files/poza_3_scapa_de_injectii.png?v=1780916397" style="max-width: 100%; border-radius: 28px;" alt="Tanpa suntik">
+            </div>
+        </div>
+    </div>
+
+    <!-- Fitur Utama -->
+    <div class="container" style="margin: 60px auto;">
+        <h2 class="section-title">✨ Fitur Unggulan Face Lifting Patch</h2>
+        <div style="text-align: center;">
+            <img src="https://raftuldorintelor.ro/cdn/shop/files/poza_6_puncte_forte.png?v=1780916409" style="max-width: 100%; border-radius: 32px; box-shadow: 0 8px 20px rgba(0,0,0,0.05);" alt="Fitur lengkap">
+        </div>
+        <div class="package-row" style="margin-top: 30px;">
+            <div class="card-feature"><i class="fas fa-clock" style="font-size: 2rem; color:var(--primary);"></i><h3>Hasil Cepat</h3><p>Langsung kencang setelah 30 menit aplikasi</p></div>
+            <div class="card-feature"><i class="fas fa-leaf" style="font-size: 2rem; color:var(--primary);"></i><h3>Bahan Alami</h3><p>Ekstrak kolagen & peptida premium</p></div>
+            <div class="card-feature"><i class="fas fa-shield-alt" style="font-size: 2rem; color:var(--primary);"></i><h3>BPOM & Halal</h3><p>Sertifikasi resmi, aman untuk kulit sensitif</p></div>
+        </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="container" style="margin: 50px auto;">
+        <h2 class="section-title">📸 Transformasi Nyata</h2>
+        <div class="gallery-grid" id="galleryGrid">
+            <div class="gallery-item" data-img="https://raftuldorintelor.ro/cdn/shop/files/poza_4_before_and_after.png?v=1780916385">
+                <img src="https://raftuldorintelor.ro/cdn/shop/files/poza_4_before_and_after.png?v=1780916385" alt="Before After">
+            </div>
+            <div class="gallery-item" data-img="https://raftuldorintelor.ro/cdn/shop/files/poza7principala.png?v=1780916372">
+                <img src="https://raftuldorintelor.ro/cdn/shop/files/poza7principala.png?v=1780916372" alt="Produk utama">
+            </div>
+            <div class="gallery-item" data-img="https://raftuldorintelor.ro/cdn/shop/files/poza_6_puncte_forte.png?v=1780916409">
+                <img src="https://raftuldorintelor.ro/cdn/shop/files/poza_6_puncte_forte.png?v=1780916409" alt="Detail fitur">
+            </div>
+            <div class="gallery-item" data-img="https://raftuldorintelor.ro/cdn/shop/files/poza_3_scapa_de_injectii.png?v=1780916397">
+                <img src="https://raftuldorintelor.ro/cdn/shop/files/poza_3_scapa_de_injectii.png?v=1780916397" alt="Tanpa suntik">
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimoni -->
+    <div class="container" style="margin: 50px auto;">
+        <h2 class="section-title">💬 Testimoni Customer</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 24px;">
+            <div class="testimonial-card"><i class="fas fa-star" style="color: gold;"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p>"Setelah 2 minggu pakai, rahang saya terlihat tegas! Lingkaran hitam memudar. Recommended!"</p><strong>Jesica</strong> - Mahasiswa</div>
+            <div class="testimonial-card"><i class="fas fa-star" style="color: gold;"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p>"Saya yang usia 48 tahun, kerutan dahi berkurang drastis. Padahal sebelumnya takut suntik. Sekarang jadi langganan!"</p><strong>Dewi Lestari</strong> - Ibu Rumah Tangga</div>
+            <div class="testimonial-card"><i class="fas fa-star" style="color: gold;"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p>"Produk ini luar biasa! Saya pengusaha kecantikan, klien saya suka banget hasil lifting instan tanpa jarum. Efek wow!"</p><strong>Rina Andriani</strong> - Beauty Influencer</div>
+            <div class="testimonial-card"><i class="fas fa-star" style="color: gold;"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p>"Beneran kencang! Pipi saya yang kendur jadi terangkat setelah pakai 3 kali. Harga worth it!"</p><strong>Nadia</strong> - Eksekutif Muda</div>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 28px; margin-top: 40px; flex-wrap: wrap;">
+            <span><i class="fas fa-certificate"></i> BPOM Approved</span>
+            <span><i class="fas fa-check-circle"></i> Sertifikasi Halal</span>
+            <span><i class="fas fa-trophy"></i> Dermatest 5 Star</span>
+            <span><i class="fas fa-gift"></i> Bonus Guide Anti Aging</span>
+        </div>
+    </div>
+
+    <!-- Urgency Bar -->
+    <div class="container">
+        <div class="urgency-bar">
+            <div class="counter-box"><i class="fas fa-eye"></i> <span id="viewerCount">312</span> orang melihat produk ini hari ini</div>
+            <div class="counter-box"><i class="fas fa-boxes"></i> Stok terbatas: <span id="stockCount">115</span> box tersisa</div>
+            <div class="timer-box"><i class="fas fa-hourglass-half"></i> Promo berakhir dalam: <span id="countdownTimer">02:00:00</span></div>
+        </div>
+    </div>
+
+    <!-- Paket + Bonus -->
+    <div class="container">
+        <h2 class="section-title">🎁 Pilih Paket & Dapatkan Bonus</h2>
+        <div class="package-row">
+            <div class="package-card">
+                <h3>Paket Basic</h3>
+                <p>40 pcs (pemakaian 1 bulan)</p>
+                <span class="price-old">Rp 207.000</span><br>
+                <span class="price-new" style="font-size:1.8rem;">Rp 138.000</span>
+                <hr style="margin: 15px 0;">
+                <small><i class="fas fa-truck"></i> Gratis Ongkir s/d 30rb</small>
+                <button class="btn-package scroll-to-form">Pilih Basic</button>
+            </div>
+            <div class="package-card popular">
+                <div class="popular-badge">✨ PAKET HEMAT TERLARIS ✨</div>
+                <h3>Paket Hemat</h3>
+                <p>80 pcs + Bonus 1 pcs Masker Kolagen</p>
+                <span class="price-old">Rp 282.000</span><br>
+                <span class="price-new" style="font-size:1.8rem;">Rp 188.000</span>
+                <hr style="margin: 15px 0;">
+                <small><i class="fas fa-gift"></i> Bonus eksklusif + Gratis Ongkir 30rb</small>
+                <button class="btn-package scroll-to-form">Ambil Paket Hemat</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Embed -->
+    <div class="container" id="order-form">
+        <div class="form-embed-area">
+            <h3 style="font-family: 'Playfair Display'; text-align: center;">🛍️ Lengkapi Data Pesanan</h3>
+            <p style="text-align: center; margin-bottom: 20px;">Khusus transfer hari ini <strong>GRATIS ONGKIR (maks. Rp 30.000)</strong> + bonus panduan kecantikan</p>
+            <div class="ooef">
+                <form class="orderonline-embed-form" data-username="vera" data-product-slug="face-lifting-patch" data-product-id="6a2d957e8517f1459a087783" id="oo-embed-form-face-lifting-patch-2713" data-origin="orderonline">
+                    <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div>
+                </form>
+            </div>
+            <script>
+                if (typeof xLogError != 'function') {
+                    var xLogError = function (error) {
+                        var req = new XMLHttpRequest();
+                        var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
+                        var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                        req.open('POST', 'https://api.orderonline.id/log', true);
+                        req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                        req.send(params);
+                    };
+                }
+                try {
+                    if (typeof xEmbedScript != 'function') {
+                        var xEmbedScript = function () {
+                            !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.2', 'oo-embed-js');
+                        };
+                    }
+                    if (typeof xEmbedInit != 'function') {
+                        var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.2';n.queue = []; };
+                    }
+                    xEmbedInit(window);
+                    ooe('setup', 'redirect', 'https://vera.orderonline.id');
+                    ooe('init', '5f1a7807a9bf807d6c63d963', '6a2d957e8517f1459a087783', '6a2d957f8517f1459a087784', 'oo-embed-form-face-lifting-patch-2713', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":false});
+                    if (!window.jQuery) {
+                        !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+                    } else { xEmbedScript(); }
+                } catch (e) { xLogError(e); throw e; }
+            </script>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Neylna Store - Face Lifting Patch. Hasil tiap individu dapat berbeda. Promo terbatas. Gratis ongkir maksimal Rp 30.000 untuk transfer bank.</p>
+</footer>
+
+<div id="imageModal" class="modal">
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="Preview">
+    </div>
+</div>
+
+<script>
+    // ======================== STOCK & VIEWER COUNTERS ===================
+    let stock = 115;
+    let viewers = 312;
+    const stockSpan = document.getElementById('stockCount');
+    const viewerSpan = document.getElementById('viewerCount');
+    function updateUI() {
+        stockSpan.innerText = stock;
+        viewerSpan.innerText = viewers;
+    }
+    updateUI();
+
+    // ======================== FAKE ORDER POPUP NATURAL RANDOM ===================
+    const firstNames = ["Dewi", "Rina", "Sari", "Citra", "Mega", "Tika", "Winda", "Nurul", "Putri", "Lestari", "Jesica", "Amanda", "Silvia", "Karina", "Yuni"];
+    const cities = ["Jakarta", "Surabaya", "Bandung", "Medan", "Semarang", "Denpasar", "Makassar", "Yogyakarta", "Malang", "Palembang", "Bekasi", "Tangerang", "Bogor", "Balikpapan"];
+    const packages = ["Paket Basic 40pcs", "Paket Hemat 80pcs + Bonus"];
+    let isPopupActive = false;
+
+    function getRandomItem(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+    function randomInitial(name) { return name.charAt(0).toUpperCase(); }
+
+    function createFakeOrderPopup() {
+        if (isPopupActive) return;
+        if (stock <= 0) return;
+        const name = getRandomItem(firstNames);
+        const city = getRandomItem(cities);
+        const pkg = getRandomItem(packages);
+        const initial = randomInitial(name);
+        const popupDiv = document.createElement('div');
+        popupDiv.className = 'order-popup';
+        popupDiv.innerHTML = `
+            <div class="popup-avatar">${initial}</div>
+            <div class="popup-content">
+                <strong>${name}</strong> dari ${city} <br>
+                🛒 membeli <strong>${pkg}</strong> <span style="font-size:11px;">⏱️ baru saja</span>
+                <div class="swipe-hint"><i class="fas fa-arrow-up"></i> swipe up / tutup</div>
+            </div>
+            <button class="popup-close"><i class="fas fa-times"></i></button>
+        `;
+        isPopupActive = true;
+        document.body.appendChild(popupDiv);
+        if (stock > 0) {
+            stock -= 1;
+            viewers += Math.floor(Math.random() * 5) + 2;
+            updateUI();
+        }
+        const removePopup = () => {
+            if (popupDiv && popupDiv.remove) popupDiv.remove();
+            isPopupActive = false;
+        };
+        const closeBtn = popupDiv.querySelector('.popup-close');
+        closeBtn.addEventListener('click', removePopup);
+        let touchStartY = 0;
+        popupDiv.addEventListener('touchstart', (e) => { touchStartY = e.touches[0].clientY; });
+        popupDiv.addEventListener('touchmove', (e) => {
+            const deltaY = e.touches[0].clientY - touchStartY;
+            if (deltaY < -40) removePopup();
+        });
+        setTimeout(removePopup, 5500);
+    }
+
+    function scheduleNextPopup() {
+        const randomDelay = Math.floor(Math.random() * (20000 - 10000 + 1) + 10000);
+        setTimeout(() => {
+            if (!isPopupActive && stock > 0) createFakeOrderPopup();
+            scheduleNextPopup();
+        }, randomDelay);
+    }
+    setTimeout(() => {
+        if (!isPopupActive && stock > 0) createFakeOrderPopup();
+        scheduleNextPopup();
+    }, 5000);
+
+    // Countdown Timer
+    let endTime = new Date().getTime() + (2 * 60 * 60 * 1000);
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = endTime - now;
+        if (distance < 0) {
+            document.getElementById('countdownTimer').innerText = "00:00:00";
+            return;
+        }
+        const hours = Math.floor((distance % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+        const minutes = Math.floor((distance % (60 * 60 * 1000)) / (60 * 1000));
+        const seconds = Math.floor((distance % (60 * 1000)) / 1000);
+        document.getElementById('countdownTimer').innerHTML = `${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Gallery Modal
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const imgSrc = item.getAttribute('data-img');
+            if(imgSrc) { modalImg.src = imgSrc; modal.style.display = 'flex'; }
+        });
+    });
+    modal.addEventListener('click', () => { modal.style.display = 'none'; });
+
+    // Scroll to form
+    const scrollBtns = document.querySelectorAll('.scroll-to-form');
+    scrollBtns.forEach(btn => {
+        btn.addEventListener('click', () => { document.getElementById('order-form').scrollIntoView({ behavior: 'smooth' }); });
+    });
+    document.querySelector('.btn-cta-header').addEventListener('click', (e) => { e.preventDefault(); document.getElementById('order-form').scrollIntoView({ behavior: 'smooth' }); });
+    
+    setInterval(() => {
+        viewers += Math.floor(Math.random() * 4) + 1;
+        viewerSpan.innerText = viewers;
+    }, 14000);
+</script>
+</body>
+</html>
