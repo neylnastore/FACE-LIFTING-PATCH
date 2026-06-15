@@ -166,6 +166,24 @@
             background: #fff0e8;
             border: 1px solid var(--primary);
         }
+        .package-item.super {
+            background: #eaf7e6;
+            border: 2px solid #2c7a4d;
+            position: relative;
+        }
+        .super-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2c7a4d;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 30px;
+            white-space: nowrap;
+        }
         .package-name {
             font-weight: 800;
             font-size: 1.2rem;
@@ -179,6 +197,9 @@
             font-size: 1.6rem;
             font-weight: 800;
             color: var(--primary);
+        }
+        .price-new-paket.super-price {
+            color: #2c7a4d;
         }
         .ongkir-info {
             background: #e6f4ea;
@@ -230,10 +251,27 @@
             position: relative;
             background: #fffbf9;
         }
+        .package-card.super {
+            border: 2px solid #2c7a4d;
+            background: #f5fbf7;
+            position: relative;
+        }
         .popular-badge {
             position: absolute;
             top: -14px;
             background: var(--primary);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .super-badge-card {
+            position: absolute;
+            top: -14px;
+            background: #2c7a4d;
             color: white;
             padding: 6px 18px;
             border-radius: 40px;
@@ -252,6 +290,9 @@
             color: white;
             margin-top: 20px;
             cursor: pointer;
+        }
+        .btn-package.super-btn {
+            background: #2c7a4d;
         }
         .form-embed-area {
             background: white;
@@ -391,7 +432,7 @@
                 <div class="tagline">MENDING PAKE INI <span class="highlight">DARIPADA SUNTIK KULIT</span><br>Angkat Wajah Instan!</div>
                 <p style="font-size: 1.1rem; margin-bottom: 16px;">✨ Tanpa rasa sakit, tanpa jarum. Hasil lifting dalam 30 menit. Kencangkan wajah, hilangkan garis halus & kerutan.</p>
                 
-                <!-- PERBANDINGAN PAKET LANGSUNG DI ATAS -->
+                <!-- PERBANDINGAN PAKET LANGSUNG DI ATAS (ditambahkan varian SUPER HEMAT) -->
                 <div class="package-compare">
                     <div class="package-item">
                         <div class="package-name">💎 Paket Basic</div>
@@ -404,6 +445,14 @@
                         <div class="price-old-paket">Rp 282.000</div>
                         <div class="price-new-paket">Rp 188.000</div>
                         <div>80 pcs + Bonus Masker Kolagen</div>
+                    </div>
+                    <!-- VARIAN BARU SUPER HEMAT KEMASAN BARU 120PCS -->
+                    <div class="package-item super">
+                        <div class="super-badge">🔥 SUPER HEMAT</div>
+                        <div class="package-name">📦 Kemasan Baru 120PCS</div>
+                        <div class="price-old-paket">Rp 299.000</div>
+                        <div class="price-new-paket super-price">Rp 199.000</div>
+                        <div>120 pcs + Extra Bonus Serum</div>
                     </div>
                 </div>
                 <div class="ongkir-info">
@@ -490,7 +539,7 @@
         </div>
     </div>
 
-    <!-- Paket + Bonus -->
+    <!-- Paket + Bonus (ditambahkan varian SUPER HEMAT) -->
     <div class="container">
         <h2 class="section-title">🎁 Pilih Paket & Dapatkan Bonus</h2>
         <div class="package-row">
@@ -512,6 +561,17 @@
                 <hr style="margin: 15px 0;">
                 <small><i class="fas fa-gift"></i> Bonus eksklusif + Gratis Ongkir 30rb</small>
                 <button class="btn-package scroll-to-form">Ambil Paket Hemat</button>
+            </div>
+            <!-- VARIAN BARU SUPER HEMAT KEMASAN BARU 120PCS -->
+            <div class="package-card super">
+                <div class="super-badge-card">🔥 SUPER HEMAT KEMASAN BARU</div>
+                <h3>Paket Super Hemat</h3>
+                <p>120 pcs (Kemasan Baru) + Extra Bonus Serum + Masker</p>
+                <span class="price-old">Rp 299.000</span><br>
+                <span class="price-new" style="font-size:1.8rem; color:#2c7a4d;">Rp 199.000</span>
+                <hr style="margin: 15px 0;">
+                <small><i class="fas fa-gift"></i> Bonus Serum + Gratis Ongkir 30rb</small>
+                <button class="btn-package super-btn scroll-to-form">Pilih SUPER HEMAT</button>
             </div>
         </div>
     </div>
@@ -583,7 +643,7 @@
     // ======================== FAKE ORDER POPUP NATURAL RANDOM ===================
     const firstNames = ["Dewi", "Rina", "Sari", "Citra", "Mega", "Tika", "Winda", "Nurul", "Putri", "Lestari", "Jesica", "Amanda", "Silvia", "Karina", "Yuni"];
     const cities = ["Jakarta", "Surabaya", "Bandung", "Medan", "Semarang", "Denpasar", "Makassar", "Yogyakarta", "Malang", "Palembang", "Bekasi", "Tangerang", "Bogor", "Balikpapan"];
-    const packages = ["Paket Basic 40pcs", "Paket Hemat 80pcs + Bonus"];
+    const packages = ["Paket Basic 40pcs", "Paket Hemat 80pcs + Bonus", "Paket Super Hemat 120pcs + Serum"];
     let isPopupActive = false;
 
     function getRandomItem(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
